@@ -13,6 +13,7 @@ Este proyecto es un ejemplo básico de Spring Batch que utiliza Java 21. El proy
 - **Spring Batch**
 - **Spring Framework**
 - **Maven**
+- **Git**
 
 ## Configuración del proyecto
 
@@ -22,6 +23,8 @@ El proyecto incluye la siguiente configuración:
 - **HelloWorldJobConfiguration:** Configuración básica de un `Job` y un `Step` que imprimen "Hello world!".
 
 # Como utilizar
+
+Para poder ejecutar 
 
 1. Clonar el repositorio
 

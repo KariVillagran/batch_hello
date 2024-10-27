@@ -34,11 +34,32 @@ public class HelloWorldJobConfiguration {
 		return new JobBuilder("job", jobRepository).start(step).build();
 	}
 
+
+    // Metodo main de tu aplicacion
 	public static void main(String[] args) throws Exception {
-		ApplicationContext context = new AnnotationConfigApplicationContext(HelloWorldJobConfiguration.class);
-		JobLauncher jobLauncher = context.getBean(JobLauncher.class);
-		Job job = context.getBean(Job.class);
-		jobLauncher.run(job, new JobParameters());
+		/*
+        * Crea un contexto de aplicación basado en anotaciones, cargando la configuración
+        * especificada en la clase HelloWorldJobConfiguration.        
+        */          
+        ApplicationContext context = new AnnotationConfigApplicationContext(HelloWorldJobConfiguration.class);
+
+        /* 
+        * Obtiene el bean de JobLauncher desde el contexto. El JobLauncher se encarga de ejecutar
+        * trabajos batch configurados en Spring Batch.
+        */
+        JobLauncher jobLauncher = context.getBean(JobLauncher.class);
+
+        /* 
+        * Obtiene el bean del Job (trabajo batch) desde el contexto. El Job representa el proceso
+        * batch que se va a ejecutar.
+        */
+        Job job = context.getBean(Job.class);
+
+        /*
+        * Ejecuta el trabajo batch utilizando el JobLauncher, pasando el Job y los parámetros
+        * necesarios para su ejecución (en este caso, un conjunto vacío de parámetros).
+        */
+        jobLauncher.run(job, new JobParameters());
 	}
 
 }
