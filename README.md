@@ -24,7 +24,7 @@ El proyecto incluye la siguiente configuración:
 
 # Como utilizar
 
-Para poder ejecutar 
+Para poder utilizar este repositorio, deberas abrir tu terminal (bash/PowerShell) e ir al directorio del proyecto.
 
 1. Clonar el repositorio
 
